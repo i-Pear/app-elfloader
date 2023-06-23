@@ -1,2 +1,10 @@
 build/
 .config*
+.idea/
+.vscode/
+vdso/libvdso.so
+vdso/libvdso.o
+vdso/libvdso.so.1
+elf_load.c
+Makefile
+vdso/vdso-image.c

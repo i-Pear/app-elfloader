@@ -4,15 +4,15 @@ WITH_TLSF       ?= n
 WITH_MUSL       ?= n
 WITH_NEWLIB     ?= n
 
-UK_ROOT  ?= $(PWD)/../../unikraft
-UK_LIBS  ?= $(PWD)/../../libs
-UK_PLATS ?= $(PWD)/../../plats
+UK_ROOT  ?= /root/unikraft/unikraft
+UK_LIBS  ?= /root/unikraft/libs
+UK_PLATS ?= /root/unikraft/plats
 
-LIBS-y                  := $(UK_LIBS)/libelf
+LIBS-y                  := $(UK_LIBS)/lib-libelf
 LIBS-$(WITH_ZYDIS)      := $(LIBS-y):$(UK_LIBS)/zydis
-LIBS-$(WITH_LWIP)       := $(LIBS-y):$(UK_LIBS)/lwip
+LIBS-$(WITH_LWIP)       := $(LIBS-y):$(UK_LIBS)/lib-lwip
 LIBS-$(WITH_TLSF)       := $(LIBS-y):$(UK_LIBS)/tlsf
-LIBS-$(WITH_MUSL)       := $(LIBS-y):$(UK_LIBS)/musl
+LIBS-$(WITH_MUSL)       := $(LIBS-y):$(UK_LIBS)/lib-musl
 LIBS-$(WITH_NEWLIB)     := $(LIBS-y):$(UK_LIBS)/newlib
 PLATS-y                 :=
 
